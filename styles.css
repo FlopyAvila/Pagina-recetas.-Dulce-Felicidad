@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #FFEDED;
+    font-family: "Playfair Display", serif;
+    height: 100%
+}
+
+.container {
+    max-width: 1440px;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.container-navbar{
+    background-color: #FFAAAD;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 10px 0;
+}
+
+.nav-logo{
+    height: 40px;
+    margin: 0 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar-nav{
+    display: flex;
+    align-items: center;
+}
+
+.nav-list{
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-link{  
+    margin-left: 40px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.nav-link a{
+    color: #772B2B;
+}
+
+.nav-link a::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #772B2B;
+    opacity: 0;
+}
+
+.nav-link:hover a{
+    color: #ffffff;
+}
+
+.nav-menu-btn{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+.navbar-mobile{
+    display: none;
+}
+
+.container-area{
+    width: 100%;
+    margin: auto;
+    padding: 0;
+}
+
+.inicio{
+    background-color: #FFD0D6;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 5rem 0;  
+
+}
+
+
+.inicio-texto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    color: #772B2B;
+}
+
+.inicio-texto h1{
+    font-size: 3.2rem;
+    margin-bottom: 20px;
+    font-weight: normal;
+    max-width: 400px;
+}
+
+.inicio-texto p{
+    color: #2B2B2B;
+    font-size: 1.5rem;
+    max-width: 90%;
+}
+
+.macarron-inicio{
+    width:30vw;
+    max-width: 190px;
+    min-width: 140px;
+    object-fit: contain;
+}
+
+
+
+
+@media only screen and (max-width:770px){
+    .nav-list{
+        display: none;
+    }
+    
+    .navbar>*{
+        margin-left: 10px;
+    }
+    .navbar-mobile{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 64px;
+        right: 0;
+        background-color: #FFEDED;
+        width: 100%;
+        box-shadow: 0 2px 5px #772B2B;
+        z-index: 1;
+    }
+
+    .nav-link-mobile{
+        margin-left: 40px;
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+
+    .nav-list-mobile{
+        list-style: none;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .nav-list-mobile a{
+        color: #772B2B;
+        position: relative;
+    }
+
+    .nav-link-mobile a::after{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #772B2B;
+        opacity: 0;
+    }
+    
+    .nav-link-mobile:hover a{
+        color: #FFAAAD;
+    }
+
+    .nav-menu-btn{
+        display: block;
+        margin: 0;
+    }
+
+    .nav-menu-btn img{
+        height: 30px;
+        margin: 0 10px;
+    }
+
+
+    .inicio-texto{
+        max-width: 95%;
+    }
+
+    .inicio-texto h1{
+        font-size: 2.5rem;
+    }
+    .inicio-texto p{
+        font-size: 1.2rem;
+    }
+
+}
+
+@media only screen and (max-width:580px){
+    .macarron-inicio{
+        display: none;
+    }
+
+    .inicio{
+        background-image: linear-gradient(0deg, #ffd0d6be, #ffd0d6be), url(img/macarron.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        min-height: 50vh;
+    }
+}
