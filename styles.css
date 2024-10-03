@@ -134,6 +134,55 @@ a {
 }
 
 
+.container-recetas{
+    display: grid;
+    grid-template-columns: 
+    repeat(
+        auto-fit, 
+        minmax(150px, 1fr)
+    );
+    gap: 15px;
+    justify-content: center;
+    padding: 30px;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.recetas figure{ 
+    width: 100%;
+    max-width: 100px;
+    text-align: center;
+    margin: 0;
+}
+
+.recetas img{
+    width: 100%;
+    aspect-ratio: 2/3;
+    border:solid 3px #FFAAAD;
+    object-fit: cover;
+}
+
+.recetas figcaption{
+    margin-top: 4px;
+    margin-bottom: 10px;
+    color: #2B2B2B;
+    text-align: center;
+}
+
+
+.recetas:hover{
+    img {
+        box-shadow: 2px 2px 15px rgba(119, 43, 43, 0.4);
+    transform: translateY(-1%);
+    }
+
+    figcaption{
+        color: #772b2b;
+    font-weight: bold;
+    }
+    cursor: pointer;
+}
+
 
 
 @media only screen and (max-width:770px){
